@@ -34,6 +34,15 @@ module "liapi" {
 
 > **_NOTE:_**  Please use the example provider configuration in `provider.tf` to configure the AWS and Kubernetes providers. This may vary depending on your environment.
 
+## Example (One-Command Deploy)
+
+Clone this repository down and change directory into the `examples` directory.
+Modify the `provider.tf` file to configure the AWS and Kubernetes providers.
+Modify the `main.tf` file to include your desired inputs and run `terraform init` to initialize the Terraform environment.
+Once initialized, run `terraform apply` to provision the resources.
+
+Currently, the deployment requires a managed zone to be created in Route53 for the cluster. This is used by external-dns to create DNS entries for services within the cluster. This is a manual step that needs to be done before running the terraform apply command. The managed zone name is specified in the `external_dns_hosted_zone_arns` variable.
+
 ## Requirements
 
 The following requirements are needed by this module:
