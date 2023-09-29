@@ -33,7 +33,7 @@ resource "helm_release" "argocd-liapi" {
                 value = "/*"
               },
               {
-                name = "ingress.hosts[0].paths[0].pathType"
+                name  = "ingress.hosts[0].paths[0].pathType"
                 value = "ImplementationSpecific"
               },
               {

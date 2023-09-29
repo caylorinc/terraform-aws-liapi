@@ -2,11 +2,11 @@
 # https://cert-manager.io/docs/installation/helm/
 # https://github.com/cert-manager/cert-manager/tree/master/deploy/charts/cert-manager
 resource "helm_release" "cert_manager" {
-  name       = "cert-manager"
-  repository = "https://charts.jetstack.io"
-  chart      = "cert-manager"
-  version    = "1.13.0"
-  namespace  = "cert-manager"
+  name             = "cert-manager"
+  repository       = "https://charts.jetstack.io"
+  chart            = "cert-manager"
+  version          = "1.13.0"
+  namespace        = "cert-manager"
   create_namespace = true
 
   set {

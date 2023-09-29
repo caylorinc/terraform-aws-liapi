@@ -41,7 +41,7 @@ module "eks" {
   # control_plane_subnet_ids = var.eks_control_plane_subnet_ids
 
   eks_managed_node_groups = {
-     main = {
+    main = {
       min_size       = 2
       max_size       = 3
       desired_size   = 2
@@ -50,7 +50,7 @@ module "eks" {
       platform       = "linux"
     }
   }
-  enable_irsa             = true
+  enable_irsa = true
 
   manage_aws_auth_configmap = true
   aws_auth_roles            = var.eks_aws_auth_roles
